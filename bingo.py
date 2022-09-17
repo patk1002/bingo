@@ -54,6 +54,8 @@ def generate_card():
                         [31, 32, 33, 34, 35],
                         [46, 47, 48, 49, 50],
                         [61, 62, 63, 64, 65]))
+    # set center cell to 0 as free spot
+    card[2][2] = 0
     return card
 
 
@@ -61,7 +63,6 @@ def print_card(card):
     """
     Print the Bingo card
     """
-    print("Now printing the card as it is.")
     # print title letters first
     for index in range(5):
         print(letters[index], end="\t")
