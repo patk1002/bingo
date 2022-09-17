@@ -1,6 +1,6 @@
 #! /usr/env python
 """
-gamePlayer automates playing games on screen.
+This is to play bingo
 Some ideas came from https://stackoverflow.com/questions/69601220/bingo-using-python
 """
 
