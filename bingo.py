@@ -7,6 +7,8 @@ Some ideas came from https://stackoverflow.com/questions/69601220/bingo-using-py
 import numpy as np
 import random
 
+letters = ["B", "I", "N", "G", "O"]
+
 # random_draw_list = random.sample(range(1, 76), 75)
 
 # def generate_card():
@@ -47,12 +49,11 @@ def generate_card():
     Generate the Bingo card
     """
     print("Now the Bingo card is being generated.")
-    title = ["B", "I", "N", "G", "O"]
-    card = np.array(([1, 16, 31, 46, 61],
-                     [2, 17, 32, 47, 62],
-                     [3, 18, 33, 48, 63],
-                     [4, 19, 34, 49, 64],
-                     [5, 20, 35, 50, 65]))
+    card = np.array(([1, 2, 3, 4, 5],
+                        [16, 17, 18, 19, 20],
+                        [31, 32, 33, 34, 35],
+                        [46, 47, 48, 49, 50],
+                        [61, 62, 63, 64, 65]))
     return card
 
 
@@ -61,14 +62,17 @@ def print_card(card):
     Print the Bingo card
     """
     print("Now printing the card as it is.")
-    print(card)
+    # print title letters first
+    for index in range(5):
+        print(letters[index], end="\t")
+    print("")
+    # print Bingo card
+    for index in range(5):
+        for index2 in range(5):
+            print(card[index2][index], end="\t")
+        print("")
+    print("\n")
 
-#     for letter in card:
-#         print(letter, end="\t")
-#         for number in card[letter]:
-#             print(number, end="\t")
-#         print("\n")
-#     print("\n")
 
 def play_bingo_game():
     """
