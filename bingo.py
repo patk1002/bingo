@@ -27,15 +27,6 @@ import random
 #             card[letter][2] = "X" # free space!
 #     return card
 
-# def print_card(card):
-
-#     for letter in card:
-#         print(letter, end="\t")
-#         for number in card[letter]:
-#             print(number, end="\t")
-#         print("\n")
-#     print("\n")
-
 # def IsBingo(card):
 #     for i in range (5):
 #         row_zeros=np.count_nonzero(card[i:,])
@@ -72,8 +63,14 @@ def print_card(card):
     print("Now printing the card as it is.")
     print(card)
 
+#     for letter in card:
+#         print(letter, end="\t")
+#         for number in card[letter]:
+#             print(number, end="\t")
+#         print("\n")
+#     print("\n")
 
-def playBingoGame():
+def play_bingo_game():
     """
     Play one Bingo game here
     """
@@ -84,13 +81,13 @@ def playBingoGame():
     print("Now you can enter the Bingo number, play, check for Bingo, and loop.")
 
 
-def playBingoGames():
+def play_bingo_games():
     """
     Play multiple Bingo games, asking after each to continue or not
     """
     playAgain = True
     while (playAgain):
-        playBingoGame()
+        play_bingo_game()
         playAgainInput = input("Do you want to play Bingo again? (y or n)")
         if playAgainInput.lower()[0] == "n":
             playAgain = False
@@ -105,7 +102,7 @@ def main():
     """
     print("Game Player here...")
     # print(f"__name__ has a value of {__name__}.")
-    playBingoGames()
+    play_bingo_games()
 
 if __name__ == "__main__":
     main()
