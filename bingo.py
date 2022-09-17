@@ -52,6 +52,9 @@ import random
 # card = np.where(card == number_that_we_check, 0, card) 
 
 def generate_card():
+    """
+    Generate the Bingo card
+    """
     print("Now the Bingo card is being generated.")
     title = ["B", "I", "N", "G", "O"]
     card = np.array(([1, 16, 31, 46, 61],
@@ -63,11 +66,17 @@ def generate_card():
 
 
 def print_card(card):
+    """
+    Print the Bingo card
+    """
     print("Now printing the card as it is.")
     print(card)
 
 
 def playBingoGame():
+    """
+    Play one Bingo game here
+    """
     print("\nLet's play Bingo now...")
     card = generate_card()
     print("\nHere is your card:\n")
@@ -76,6 +85,9 @@ def playBingoGame():
 
 
 def playBingoGames():
+    """
+    Play multiple Bingo games, asking after each to continue or not
+    """
     playAgain = True
     while (playAgain):
         playBingoGame()
@@ -88,6 +100,9 @@ def playBingoGames():
 
 
 def main():
+    """
+    Main function
+    """
     print("Game Player here...")
     # print(f"__name__ has a value of {__name__}.")
     playBingoGames()
